@@ -1,0 +1,6 @@
+1. semantic
+2. block
+3. anchor element
+4. relative
+5. compression
+6. form
