@@ -1,0 +1,16 @@
+Ronece Saab
+
+
+1. HTML is a markup language that defines how the layout and presentation of text and images appear in a webpage. It helps create structure and functionality on a webpage. 
+
+
+2. This website uses structure to help navigate the page. For example, the Fordham website makes use of headings, subheadings, paragraphs, and images to organize the information properly and readable on the page. 
+
+
+3. An HTML element is a collection of start and end tags with content inserted between them. Elements are building blocks of web pages, representing different types of content. Tags are like containers with an opening tag (<p>) and closing tags (</p) that transform the content inside the tags. An attribute tells us about elements and provides additional information about the contents of an element.
+
+
+4. Semantic elements convey meaning by their element type while structural elements with meaning have an effect on the structure of a page but don’t convey any message by the element type. 
+
+
+5. The default behavior when submitting an HTML form is the form being submitted to a URL.
