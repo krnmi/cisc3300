@@ -1,0 +1,10 @@
+1. id, id
+2. div
+3. declarations
+4. selectors
+5. specifity
+6. box
+7. padding
+8. text align center
+9. block
+
