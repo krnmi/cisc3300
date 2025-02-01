@@ -1,1 +1,5 @@
-1.
+1. hex
+2. typography
+3. font-face
+4. list-style
+5. object fit
