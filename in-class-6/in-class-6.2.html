@@ -1,0 +1,45 @@
+<html>
+    <head>
+     <title>css grid</title>
+    </head>
+    <body>
+
+        <div class="grid-container">
+            <div class="grid-item-1 grid-item">div1</div>
+            <div class="grid-item-2 grid-item">div2</div>
+            <div class="grid-item-3 grid-item">div3</div>
+        </div>
+
+        <style>
+
+
+            .grid-container {
+                display: grid;
+                grid-template-rows: 100px 100px 100px 100px;
+                grid-template-columns: 100px 100px 100px 100px;
+                border: 5px;
+                border-color: black;
+            }
+
+            .grid-item-1 {
+                grid-row-start: 1;
+                grid-row-end: 5;
+                grid-column-start: 1;
+                grid-column-end: 2;
+                background-color: blue;
+            }
+
+            .grid-item-2 {
+                grid-row-start: 1;
+                grid-row-end: 3;
+                grid-column-start: 3;
+                grid-column-end: 5;
+                background-color: green;
+            }
+
+            .grid-item {
+                color: white   
+            }
+        </style>
+    </body>
+</html>
