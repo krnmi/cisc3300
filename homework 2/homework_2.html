@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ronece's Coffee Shop</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Sail' rel='stylesheet'>
+        
+        <style>
+            body {
+                font-family: 'Roboto', sans-serif;
+            }
+
+            .logo {
+                font-family: 'Sail'; font-size: 30px;
+                color: antiquewhite;
+                border: #d19aa9;
+            }
+
+            header {
+                background-color: #d19aa9;
+                text-align: center;
+                border: 2px solid black;
+                padding: 10px;
+                width: 100%;
+            }
+
+            header a {
+                padding: 10px;
+                color: antiquewhite;
+            }
+
+            form input {
+                padding: 10px;
+                border: 1px solid #d19aa9;
+                font-family: 'Roboto', sans-serif;
+            }
+
+            form button {
+                background-color: #d19aa9;
+                border: none;
+                padding: 10px 20px;
+                font-family: 'Roboto', sans-serif;
+            }
+
+        </style>
+    </head>
+
+    <body style="background-color: lightpink;">
+        <div class="logo">
+            <h1>Ronece's Cafe</h1>
+        </div>
+
+        <header>
+            <a href="#">Menu</a>
+            <a href="#">About Us</a>
+            <a href="#">Locations</a>
+        </header>
+
+        <p>Welcome to Ronece's Cafe's official website! Our cafe is the perfect spot for a quick snack or a longer stay with delicious coffee and pastries for anyone!</p>
+
+        <div>
+            <img src="coffee.pdf" alt="A few cups of coffee" width="250">
+        </div>
+
+        <div>
+            <h2>Menu</h2>
+            <p>From freshly-brewed coffee to an iced matcha latte with a croissant, there is something on the menu for everyone!</p>
+            <p>Iced Latte - $3.50</p>
+            <p>Iced Matcha Latte - $4.50</p>
+            <p>Espresso - $3.00</p>
+            <p>Croissant - $4.00</p>
+            <p>Muffin - $4.00</p>
+            <p>Cupcake - $3.50</p>
+        </div>
+
+        <div>
+            <h2>Contact Form</h2>
+            <form id="form" onsubmit="myFunction(event)">
+                <fieldset>
+                    <label for="first-name">First Name:</label>
+                    <input type="text" id="first-name" name="first-name" required>
+
+                    <label for="last-name">Last Name:</label>
+                    <input type="text" id="last-name" name="last-name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <button type="submit" style="color: antiquewhite;">Submit</button>
+                </fieldset>
+            </form>
+        </div>
+
+        <script>
+            function myFunction(e) {
+                e.preventDefault();
+                const formData = new FormData(document.getElementById('form'));
+                console.log(formData);
+            }
+        </script>
+    </body>
+</html>
