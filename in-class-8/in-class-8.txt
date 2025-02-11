@@ -1,5 +1,5 @@
-1.
-2.
-3.
-4.
-5.
+1. interpreter, interpreted
+2. dyanmic
+3. type juggling/coercion
+4. non-primitive data types
+5. comparison operators, strict equality operator
