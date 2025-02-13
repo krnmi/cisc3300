@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+    <title>question 3</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .item {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(182, 128, 240);
+            margin: 5px;
+        }
+        @media (max-width: 499px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="item 1"></div>
+    <div class="item 2"></div>
+    <div class="item 3"></div>
+    </div>
+</body>
+</html>
