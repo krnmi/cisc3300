@@ -1,1 +1,5 @@
-1.
+1. higher-order function
+2. functional
+3. dot notation or bracket notation
+4. short-circuit
+5. declarative
