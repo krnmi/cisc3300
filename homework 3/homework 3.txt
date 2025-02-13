@@ -1,2 +1,3 @@
-1. 
-2. 
+1. Flexbox is a one dimensional CSS web layout model while CSS grid is a two dimensional layout system. CSS grid allows you to control both axis while flexbox tends to allow you to control only one. 
+
+2. Responsive designs create dynamic changes to the appearance of a website, which depends on the screen size and orientation of the device being used to view it. 
