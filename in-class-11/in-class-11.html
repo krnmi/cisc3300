@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>in class 11</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div class="container d-flex flex-column justify-content-center mt-5">
+        <div class="d-flex justify-content-center">
+            <button class="btn btn-primary d-md-block" id="ajax-get">
+                button
+            </button>
+            <div id="dogs-container"></div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $('#ajax-get').on('click', function () {
+                $.ajax({
+                    url: 'http://localhost:8888/dogs',
+                    type: 'GET',
+                    dataType: 'json',
+                    success: function (data) {
+                        console.log(data);
+                        $.each(data, function (key, value) {
+                            console.log(value);
+                            $('#dogs-container').append(`
+                              <div class="user">${value['name']}</div>
+                            `);
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
