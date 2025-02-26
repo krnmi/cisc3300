@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>homework 5 question 7</title>
+</head>
+<body>
+    <ul id="clickableDivList">
+        <li>text 1</li>
+        <li>text 2</li>
+        <li>text 3</li>
+        <li>text 4</li>
+        <li>text 5</li>
+        <li>text 6</li>
+    </ul>
+
+    <script>
+        const listItems = document.querySelectorAll('#clickableDivList li');
+        const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'purple'];
+
+        listItems.forEach((item, index) => {
+            item.addEventListener('click', function() {
+                this.style.color = colors[index];
+            });
+        });
+    </script>
+</body>
+</html>
