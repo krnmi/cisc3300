@@ -1,6 +1,6 @@
-1.
-2.
-3.
-4.
-5.
-6.
+1. The DOM is an API which states what your script can ask the browser about the current page and how to tell the broswer to update what is being shown to the user. A DOM tree is a model that is created when a broswer loads a web page. It is stores in the browser's memory and consists of four main types of nodes: the document node, the element node, the attribute node, and the text node. 
+2. An XSS attack is essentially the act of an attacker gaining access to your users' accounts. This happens when a malicious user adds code to an input that is generated as html, whichcould potentially be run for different users. It can be guarded by being cautious of what content is treated as html. 
+3. EventS are "things" that happen to HTML elements. Interactions create events. Events trigger code that we can react to. Types of events are UI, keyboard, mouse, focus, form, and mutation events. Events trigger JS code by selecting the element you want to respond to, indicate the event you want to respond to, and stating the code you want to run in response.
+4. Event listeners deal with more than one function at a time. It sets up a function that will be called whenever the specified event is delivered to the target. They listen for the event by name.
+5. JQuery is a lightweight javescript library. It makes it easier to use JavaScript on a webpage. It does this by taking common tasks that require many JS lines and wraps them into methods that are called with a s ingle line of code. They are loaded via a CDN.
+6. AJAX is asynchronous JS and XML which allows web pages to be updated asynhronously by exchanging data with a web server behind the scenes. JSON is JS object notation, and is a text-based data format following JS object syntax that uses human-readable text to store and transmit data object consisting of attribute-value pairs and arrays. HTTP method types include GET (retrieves data), POST (submits an entity to the specified resource), PUT (replaces all current representations of the target resource with the request payload), PATCH (modify a resource), and DELETE (delete a resource).  
