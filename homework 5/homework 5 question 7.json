@@ -1,0 +1,8 @@
+{
+  "name": "happy",
+  "breed": "british shorthair",
+  "hometown": {
+    "name": "bronx",
+    "state": "new york"
+  }
+}
