@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Homework 5</title>
+    <meta charset="UTF-8"/>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        .clicker {
+            width: 200px;
+            height: 70px;
+            background-color: rgb(233, 202, 202);
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        .item {
+            background-color: rgb(233, 202, 202);
+            border: 1px solid black;
+            margin: 10px;
+            padding: 10px;
+        }
+        .item p {
+            color: rgb(0, 0, 0);
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <button id="ajax-get" class="clicker">items</button>
+    <div id="items-container"></div>
+    <script>
+        $('#ajax-get').on('click', function () {
+            $.ajax({
+                url: '/fake-business.php',
+                type: "GET",
+                dataType: "json",
+                success: function (data) {
+                    console.log(data);
+                    $('#items-container').empty();
+                    $.each(data, function (key, value) {
+                        $('#items-container').append(`
+                            <div class="item">
+                                <p>item: ${value.name}</p>
+                                <p>cost: $${value.price}</p>
+                            </div>
+                        `);
+                    });
+                },
+                error: function (xhr, status, error) {
+                    console.error("Error: " + status + " " + error);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
