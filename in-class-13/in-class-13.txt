@@ -1,0 +1,5 @@
+1. $
+2. associative arrays
+3. 
+4. type juggling
+5. include
