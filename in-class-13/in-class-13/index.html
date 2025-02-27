@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>in class 13</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <button id="fetch-data">press</button>
+    <div id="data-container"></div>
+
+    <script>
+        $(document).ready(function() {
+            $('#fetch-data').click(function() {
+                $.ajax({
+                    url: 'information.php',
+                    type: 'GET',
+                    success: function(data) {
+                        $('#data-container').html(data);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
