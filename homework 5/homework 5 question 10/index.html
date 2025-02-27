@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>homework 5</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <form id="myForm">
+            <label for="name">name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="age">age:</label>
+            <input type="text" id="age" name="age" required>
+
+            <label for="year">year in school:</label>
+            <input type="text" id="year" name="year" required>
+            
+            <button type="submitbutton">submit</button>
+        </form>
+        <div id="response"></div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $('#myForm').submit(function(event) {
+                event.preventDefault();
+                var formData = {
+                    name: $('#name').val(),
+                    age: $('#age').val(),
+                    year: $('#year').val()
+                };
+                $.post('submitbutton.php', formData, function(response) {
+                    $('#response').html('<p>' + response.message + '</p>');
+                }, 'json');
+            });
+        });
+    </script>
+</body>
+</html>
