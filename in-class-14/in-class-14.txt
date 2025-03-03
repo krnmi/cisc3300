@@ -1,0 +1,5 @@
+1. arrow
+2. visibility
+3. inheritence in OOP
+4. polymorphism
+5. 
