@@ -1,5 +1,5 @@
-1.
-2.
-3.
-4.
-5. 
+1. Hoisting means that the variables and functions within each execution context are created before they are executed. Closures are the ability of a function to remember the variables and functions that are declared in its outer scope.
+2. PHP stands for hypertext preprocessor. It is an interpreted programming language used to build wepbages. Server side languages process user input and interact with other servers. 
+3. PHP and JS are pretty similar, as they are both dynamic and weakly typed. However, JS is event-driven while PHP is object-oriented. JS is also functional while PHP is procedural.
+4. PHP has useful built in pieces of functionality and is the most opinionate scripting language which makes it better than python or node. It is also easy to learn and has a rich documentation base and many frameworks. 
+5. Echo is a way to output text, and it outputs one or more expressions. var_drump dumps information about one or more variables rather than outputs. It also holds type and vaue of the variables, meaning it can print out non-primitive values. 
