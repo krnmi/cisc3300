@@ -1,1 +1,5 @@
-
+1. cookie
+2. server/super global array
+3. domain
+4. server
+5. exceptions
