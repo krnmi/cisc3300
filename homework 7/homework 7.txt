@@ -1,0 +1,6 @@
+1. A class. An object is a data stucture consisting of key value pairs. OOP is object oriented programming.
+2.
+3.
+4.
+5.
+6.
