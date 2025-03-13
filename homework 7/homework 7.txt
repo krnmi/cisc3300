@@ -1,6 +1,10 @@
-1. A class. An object is a data stucture consisting of key value pairs. OOP is object oriented programming.
-2.
-3.
-4.
-5.
-6.
+1. A class is a template for creating objects. It defines properties and methods. An object is an instance of a class. OOP is object oriented programming.
+2. An abstract class are generally used for OOP because the class provides some high level functionality but leaves out certain details to be implemented by derived classes. 
+3. Superglobals are predefined variables in PHP that are available in all scopes throughout a script. Some examples include $_SERVER which is an array that contains headers, paths, and script locations. Another example is $_GET which is an array of variables passed to the current script via the url parameters. 
+4. Step 1 is to define a namespace in the class to be used, and step 2 is in the place we want to use the class we can either type out the full name space when we want to use the class or import the class into the current namespace with use keyword.
+5. MVC is a design pattern that seperates an application into three main logical components: Model, View, and Controller. Model corresponds to all the data-related logic that the user works with. Classs create models using data to represent things. Controller enables the interconnection between the views and the model so it acts as an intermediary. 
+6. a. getting all users: /users, GET
+   b. getting one users: /users/123 (123 is an example of an id number), GET
+   c. saving a user: /users, POST
+   d. editing a user: /users/123 (123 is an example of an id number), PUT
+   e. deleting a user: /users/123 (123 is an example of an id number), DELETE
