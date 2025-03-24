@@ -1,5 +1,5 @@
-1.
-2.
-3.
-4.
-5.
+1. relationships
+2. primary key
+3. join
+4. left join
+5. aggregate
