@@ -1,5 +1,4 @@
-1.
-2.
-3.
-4.
-5.
+1. Cookies are text files that can tell a browser to store data about the user and their visit to a website. Sessions are text files that store information about a user and their preferences on the server.
+2. SQL is a structered query language that is a standard language for database creation and manipulation. MySQL is a relational database program that uses SQL queries. Relational databases are databases that use a tricture that allow users to identify and access data in relation to another piece of data in the database. 
+3. Normalization is avoiding data duplication by using relationship. The columns and tables of a database are organizes to ensure that database integrity constraints properly execure their dependencies. 
+4. A primary key is the field that is uesd to uniquely idenfity each record in a table. A foreign key is is a field in one table that references the primary key in another table.
