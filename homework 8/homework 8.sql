@@ -20,8 +20,8 @@ update notes set description = 'this is a note update' where title = 'title 2'
 
 delete from notes where title = 'title 3'
 
-select * from notes order by title desc
-select * from notes
+select * from notes order by title desc;
+select * from notes limit 1 offset 1;
 select * 
 from 
 notes 
@@ -36,4 +36,4 @@ description like '%o%'
 and 
 description like '%u%' 
 and 
-description not like '% %'
+description not like '% %';
