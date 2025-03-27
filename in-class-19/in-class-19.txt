@@ -1,5 +1,5 @@
-1.
-2.
-3.
-4.
-5.
+1. PDO
+2. DSN
+3. your .env file or the information intended to be on it
+4. prepared statement
+5. sql injection hack
