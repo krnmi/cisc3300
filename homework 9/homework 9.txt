@@ -1,0 +1,6 @@
+1. Relationships are related to how tables are able to join one another in SQL. SQL joins are used in order to combine rows from different tables, as long as there is a related column.
+2. By using joins, you are usually basing it on logical relationships between tables in SQL. 
+3. A PDO is a PHP data objects, which is a system that allows you to interact with different database systems. A DSN is a string that contains everything necessary to connect to a database. 
+4. Prepared statements are SQL queries that prevent SQL injection vulnerabilities and also allow for better performance.
+5. The .env files store enviroment variables, which hold sensitive information such as poasswords or other credintials and information.
+  
