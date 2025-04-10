@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>products</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/assets/styles/users-view.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+    <div>
+        <a href="/add-products">add product</a>
+        <div id="products-container"></div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                url: `http://localhost:8888/api/products`,
+                type: "GET",
+                dataType: "json",
+                success: function (data) {
+                    $('#products-container').html('');
+                    $.each(data, function (key, value) {
+                        $('#products-container').append(`
+                            <div>
+                                <span>${value['name']} - ${value['description']} - ${value['price']}</span>
+                                <span>
+                                    <a href="edit-products/${value['id']}">edit</a>
+                                    <a href="delete-product/${value['id']}">delete</a>
+                                </div>`)
+                            });
+                    }
+                });
+
+            })
+
+
+        </script>
+
+    </body>
+</html>

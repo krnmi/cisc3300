@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>products</title>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/styles/users-view.css">
+</head>
+<body>
+
+    <a href="http://localhost:8888/">home</a>
+    <h2>edit product</h2>
+
+    <form id="form-id">
+        <div>
+            <label for="name">product name</label>
+            <input type="text" id="name" placeholder="enter product name">
+        </div>
+        <div>
+            <label for="description">product description</label>
+            <input type="text" id="description" placeholder="enter product description">
+        </div>
+        <div>
+            <label for="price">product price</label>
+            <input type="text" id="price" placeholder="enter product price">
+        </div>
+        <button type="submit">submit</button>
+    </form>
+
+    <div id="error-container"></div>
+
+    <script>
+        $(document).ready(function () {
+            const urlArray = window.location.pathname.split("/")
+            const id = urlArray[2];
+
+            $.ajax({
+                url: `http://localhost:8888/api/products/${id}`,
+                type: "GET",
+                dataType: "json",
+                success: function (data) {
+                    const product = data[0];
+                    $('#name').val(product.name);
+                    $('#description').val(product.description);
+                    $('#price').val(product.price);
+                }
+            });
+
+            $('#form-id').on('submit', function (e) {
+                e.preventDefault();
+
+                const name = $('#name').val();
+                const description = $('#description').val();
+                const price = $('#price').val();
+
+                const data = {
+                    name,
+                    description,
+                    price
+                };
+
+                $.ajax({
+                    url: `http://localhost:8888/api/products/${id}`,
+                    type: "PUT",
+                    data: data,
+                    dataType: "json",
+                    success: function (data) {
+                        window.location.replace("http://localhost:8888/");
+                    },
+                    error: function (data) {
+                        $('#error-container').html('');
+                        for (const property in data.responseJSON) {
+                            $('#error-container').append(` <div class='error-text'>${data.responseJSON[property]}</div> `);
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

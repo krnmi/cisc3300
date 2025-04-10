@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>products</title>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/styles/users-view.css">
+</head>
+<body>
+
+    
+    <a href="http://localhost:8888/">home</a>
+    <form id="form-id">
+        <div>
+            <label for="name">product name</label>
+            <input type="text" id="name" placeholder="enter name" required>
+        </div>
+        <div>
+            <label for="description">product description</label>
+            <input type="text" id="description" placeholder="enter description" required>
+        </div>
+        <div>
+            <label for="price">product price</label>
+            <input type="text" id="price" placeholder="enter price" required>
+        </div>
+
+        <button type="submit">submit</button>
+    </form>
+
+    <div id="error-container"></div>
+
+    <script>
+        $(document).ready(function () {
+            $('#form-id').on('submit', function (e) {
+                e.preventDefault();
+    
+                const name = $('#name').val();
+                const description = $('#description').val();
+                const price = $('#price').val();
+    
+                const data = {
+                    name,
+                    description,
+                    price,
+                };
+    
+                console.log(data); 
+    
+                $.ajax({
+                    url: `http://localhost:8888/api/products`,
+                    type: "POST",
+                    data: data, 
+                    dataType: "json",
+                    success: function (responseData) {
+                        console.log(responseData);
+                        window.location.replace("/");
+                    },
+                    error: function (data) {
+                        console.log(data);
+                        console.log(data.responseJSON);
+    
+                        $('#error-container').html(''); 
+    
+                        for (const property in data.responseJSON) {
+                            $('#error-container').append(`<div class='error-text'>${data.responseJSON[property]}</div>`);
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

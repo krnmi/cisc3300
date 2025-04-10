@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>products</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="/assets/styles/users-view.css">
+</head>
+<body>
+
+    <a href="http://localhost:8888/">home</a>
+    <div id="delete-product-container">
+        <h2 id="product-delete">are you sure you want to delete?</h2>
+        <div id="product-data"></div>
+        <button id="delete-button">delete</button>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            const urlArray = window.location.pathname.split("/");
+            const id = urlArray[2];
+
+            $.ajax({
+                url: `http://localhost:8888/api/products/${id}`,
+                type: "GET",
+                dataType: "json",
+                success: function (data) {
+                $('#product-delete').text(`are you sure you want to delete ${data[0].name}?`);
+
+                }
+            });
+
+            $('#delete-button').click(function () {
+                $.ajax({
+                    url: `http://localhost:8888/api/products/${id}`,
+                    type: "DELETE",
+                    dataType: "json",
+                    success: function () {
+                        window.location.replace("http://localhost:8888/");
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
